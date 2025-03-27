@@ -1,0 +1,9 @@
+### GET request to example server
+POST http://localhost:8080/shortUrlCreate
+Content-Type: application/json
+
+{
+"long_url": "https://google.com"
+}
+
+###

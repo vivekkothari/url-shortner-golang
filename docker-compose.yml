@@ -1,0 +1,17 @@
+---
+# This file is used for a local dev env, not a part of this container pod.
+services:
+  postgresql:
+    image: docker.io/bitnami/postgresql:latest
+    container_name: "url-shortner-postgresql"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRESQL_USERNAME=user
+      - POSTGRESQL_PASSWORD=password
+      - POSTGRESQL_POSTGRES_PASSWORD=password
+      - POSTGRESQL_DATABASE=url-shortner
+      - ALLOW_EMPTY_PASSWORD=yes
+      - POSTGRESQL_MAX_CONNECTIONS=1000
