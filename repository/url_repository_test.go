@@ -42,7 +42,7 @@ func TestInsertAndAccessUrl(t *testing.T) {
 		t.Fatalf("InsertURL failed: %v", err)
 	}
 
-	now := time.Now()
+	now := time.Now().Truncate(time.Nanosecond)
 
 	longURL, err := repo.AccessLongURL(context.Background(), id, now)
 
