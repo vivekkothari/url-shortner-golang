@@ -57,7 +57,7 @@ func TestInsertAndAccessUrl(t *testing.T) {
 	}
 
 	if !url.LastAccessedAt.Equal(now) {
-		t.Fatalf("last accessed at not test")
+		t.Fatalf("last accessed at not set")
 	}
 
 	if longURL != original {
