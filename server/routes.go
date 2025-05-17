@@ -79,12 +79,12 @@ func handlerGetLongUrl(urlRepo *repository.URLRepository) http.HandlerFunc {
 			return
 		}
 
-		if longURL == nil {
+		if longURL == "" {
 			http.Error(w, "URL not found", http.StatusNotFound)
 			return
 		}
 		// Redirect to the long URL
-		http.Redirect(w, r, *longURL, http.StatusFound)
+		http.Redirect(w, r, longURL, http.StatusFound)
 	}
 }
 
