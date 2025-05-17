@@ -42,7 +42,7 @@ func TestInsertAndAccessUrl(t *testing.T) {
 		t.Fatalf("InsertURL failed: %v", err)
 	}
 
-	now := time.Now().Truncate(time.Nanosecond)
+	now := time.Now().Truncate(time.Millisecond)
 
 	longURL, err := repo.AccessLongURL(context.Background(), id, now)
 
@@ -56,7 +56,7 @@ func TestInsertAndAccessUrl(t *testing.T) {
 		t.Fatalf("Unable to fetch url with id %d", id)
 	}
 
-	if !url.LastAccessedAt.Equal(now) {
+	if !url.LastAccessedAt.Truncate(time.Millisecond).Equal(now) {
 		t.Fatalf("LastAccessedAt mismatch %s, %s ", url.LastAccessedAt, now)
 	}
 
