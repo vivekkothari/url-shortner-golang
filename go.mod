@@ -2,7 +2,7 @@ module url-shortner
 
 go 1.24
 
-require github.com/jackc/pgx/v5 v5.7.5
+require github.com/jackc/pgx/v5 v5.7.6
 
 require (
 	github.com/go-jet/jet/v2 v2.13.0
