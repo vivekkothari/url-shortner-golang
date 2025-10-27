@@ -5,7 +5,7 @@ go 1.24
 require github.com/jackc/pgx/v5 v5.7.5
 
 require (
-	github.com/go-jet/jet/v2 v2.13.0
+	github.com/go-jet/jet/v2 v2.14.0
 	github.com/lib/pq v1.10.9
 )
 
