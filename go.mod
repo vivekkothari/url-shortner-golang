@@ -6,7 +6,7 @@ require github.com/jackc/pgx/v5 v5.8.0
 
 require (
 	github.com/go-jet/jet/v2 v2.14.0
-	github.com/lib/pq v1.10.9
+	github.com/lib/pq v1.11.2
 )
 
 require (
